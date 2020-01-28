@@ -7,4 +7,4 @@ Different JVM / Minecraft images are on separate branches. Containers are built 
 This branch:
 
 * GraalVM 19.3.1-java8
-* Paperclip 1.14.2 build #243
+* Nukkit 1.0 build #589
