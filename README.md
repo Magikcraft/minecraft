@@ -1,6 +1,6 @@
 # minecraft
 
-Minecraft docker containers suitable for testing Scriptcraft.
+Minecraft docker containers suitable for testing [Magikcraft](https://github.com/Magikcraft/MagikCraft), a patched version of ScriptCraft that adds NPM package support and Jasmine for unit testing.
 
 Different JVM / Minecraft images are on separate branches. Containers are built on Docker Hub.
 
