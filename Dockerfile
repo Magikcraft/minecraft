@@ -7,4 +7,4 @@ COPY nukkit-1.0-589.jar minecraft.jar
 COPY Pokkit-0.9.3.jar plugins/Pokkit-0.9.3.jar
 COPY start.sh start.sh
 
-RUN /_server_/start.sh
+CMD /_server_/start.sh
