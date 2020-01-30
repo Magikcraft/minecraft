@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/ash
 
 java -jar minecraft.jar
