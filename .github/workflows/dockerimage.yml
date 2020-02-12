@@ -1,20 +1,18 @@
-name: Docker Image CI
+name: Publish Docker images
 
 on: [repository_dispatch]
 
 jobs:
-
-  build:
-
+  buildAndPublish:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Publish Docker image to Registry
-      uses: elgohr/Publish-Docker-Github-Action@2.12
-      with:
-        name: magikcraft/minecraft
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-        dockerfile: Dockerfile
-        tags: "paper-1.15.2-graalvm"
+      - uses: actions/checkout@v2
+      - name: Publish Docker image to Registry
+        uses: elgohr/Publish-Docker-Github-Action@2.12
+        with:
+          name: magikcraft/minecraft
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          dockerfile: Dockerfile
+          tags: "paper-1.15.2-graalvm"
