@@ -8,4 +8,3 @@ This branch:
 
 * GraalVM 19.3.1-java8
 * Paperclip 1.15.2 build #83
-
