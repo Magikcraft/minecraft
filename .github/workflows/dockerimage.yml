@@ -7,21 +7,23 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        baseimage: [oracle/graalvm-ce:19.3.1-java8]
+        baseimage:
+          - { image: oracle/graalvm-ce:19.3.1-java8, tag: graalvm }
+          - { image: openjdk:8u171-jdk-alpine3.8, tag: openjdk8 }
         minecraft_jar: [paper-1.15.2]
     steps:
       - uses: actions/checkout@v2
       - name: Publish Docker image to Registry
         uses: elgohr/Publish-Docker-Github-Action@2.12
         env:
-          BASEIMAGE: ${{ matrix.baseimage }}
+          BASEIMAGE: ${{ matrix.baseimage.image }}
           MINECRAFT_JAR: ${{ matrix.minecraft_jar }}.jar
         with:
           name: magikcraft/minecraft
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: Dockerfile
-          tags: ${{ matrix.minecraft_jar }}
+          tags: ${{ matrix.minecraft_jar }}-${{ matrix.baseimage.tag }}
   triggerDependentFlow:
     runs-on: ubuntu-latest
     needs: buildAndPublish
