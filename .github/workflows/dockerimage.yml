@@ -8,8 +8,8 @@ jobs:
     strategy:
       matrix:
         cfg:
-          - { image: oracle/graalvm-ce\:19.3.1-java8, tag: graalvm }
-          - { image: openjdk\:8u171-jdk-alpine3.8, tag: openjdk8 }
+          - { image: "oracle/graalvm-ce:19.3.1-java8", tag: graalvm }
+          - { image: "openjdk:8u171-jdk-alpine3.8", tag: openjdk8 }
         minecraft_jar: [paper-1.15.2]
     steps:
       - uses: actions/checkout@v2
