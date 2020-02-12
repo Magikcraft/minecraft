@@ -12,4 +12,5 @@ Containers are built on GitHub and published to Docker Hub.
 * Nukkit 1.0 [build #616](https://ci.nukkitx.com/job/NukkitX/job/Nukkit/job/master/)
 * Nukkit 2.0 [build #69](https://ci.nukkitx.com/job/NukkitX/job/Nukkit/job/2.0/)
 
+* Pokkit [0.9.3](https://github.com/PetteriM1/Pokkit)
 

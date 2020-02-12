@@ -27,7 +27,7 @@ jobs:
           name: magikcraft/minecraft
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          dockerfile: Dockerfile
+          dockerfile: ${{ matrix.minecraft.dockerfile }}
           tags: ${{ matrix.minecraft.jar }}-${{ matrix.baseimage.tag }}
 
   notify_Camunda_Cloud:
