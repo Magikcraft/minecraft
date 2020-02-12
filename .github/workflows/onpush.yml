@@ -1,10 +1,11 @@
 name: Kick off Build Orchestration
 
-on: [push]
-  branches: "master"
-  
-jobs:
+on:
+  push:
+    branches:
+      - "master"
 
+jobs:
   startWorkflow:
     runs-on: ubuntu-latest
     steps:
