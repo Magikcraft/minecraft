@@ -9,5 +9,8 @@ This branch:
 * GraalVM 19.3.1-java8
 * Paperclip 1.15.2 build #83
 
+## Automated Builds
+
+This repository automatically rebuilds the images and pushes them to Docker Hub via a GitHub workflow.
 
 
