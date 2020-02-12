@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        baseimage:
-          - { image: oracle/graalvm-ce:19.3.1-java8, tag: graalvm }
-          - { image: openjdk:8u171-jdk-alpine3.8, tag: openjdk8 }
+        cfg:
+          - { image: oracle/graalvm-ce\:19.3.1-java8, tag: graalvm }
+          - { image: openjdk\:8u171-jdk-alpine3.8, tag: openjdk8 }
         minecraft_jar: [paper-1.15.2]
     steps:
       - uses: actions/checkout@v2
@@ -24,6 +24,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: Dockerfile
           tags: ${{ matrix.minecraft_jar }}-${{ matrix.baseimage.tag }}
+
   triggerDependentFlow:
     runs-on: ubuntu-latest
     needs: buildAndPublish
