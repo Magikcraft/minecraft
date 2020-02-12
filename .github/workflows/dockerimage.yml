@@ -10,7 +10,7 @@ jobs:
         cfg:
           - { image: "oracle/graalvm-ce:19.3.1-java8", tag: graalvm }
           - { image: "openjdk:8u171-jdk-alpine3.8", tag: openjdk8 }
-        minecraft_jar: [paper-1.15.2]
+        minecraft_jar: [paper-1.15.2, paper-1.14.4]
     steps:
       - uses: actions/checkout@v2
       - name: Publish Docker image to Registry
@@ -30,7 +30,7 @@ jobs:
     needs: buildAndPublish
     steps:
       - name: Tell Camunda Cloud What's up!
-        uses: jwulf/zeebe-action@master
+        uses: jwulf/zeebe-action@0.2.0
         with:
           zeebe_address: ${{ secrets.ZEEBE_ADDRESS }}
           zeebe_client_id: ${{ secrets.ZEEBE_CLIENT_ID }}

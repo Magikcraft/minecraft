@@ -2,12 +2,14 @@
 
 Minecraft docker containers suitable for testing [Magikcraft](https://github.com/Magikcraft/MagikCraft), a patched version of ScriptCraft that adds NPM package support and Jasmine for unit testing.
 
-Different JVM / Minecraft images are on separate branches. Containers are built on Docker Hub.
+Different JVM / Minecraft images are on separate branches. Containers are built on GitHub and published to Docker Hub.
 
-This branch:
 
+* OpenJDK 8u171-jdk-alpine3.8
 * GraalVM 19.3.1-java8
-* Paperclip 1.15.2 build #83
+
+* Paperclip 1.15.2 build #102
+* Paperclip 1.14.4 build #243
 
 ## Automated Builds
 
