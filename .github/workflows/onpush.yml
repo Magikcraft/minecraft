@@ -9,6 +9,9 @@ jobs:
   startWorkflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Get current time
+        uses: gerred/actions/current-time@master
+        id: current-time
       - name: Create Zeebe Workflow
         uses: jwulf/zeebe-action@master
         with:
@@ -18,4 +21,4 @@ jobs:
           zeebe_client_secret: ${{ secrets.ZEEBE_CLIENT_SECRET }}
           operation: createWorkflowInstance
           bpmn_process_id: magikcraft-github-build
-          variables: '{"buildid": "${{ github.sha }}-${{ time }}", "gitHubToken": "{{GitHubToken}}" }'
+          variables: '{"buildid": "${{ github.sha }}-${{ steps.current-time.outputs.time }}", "gitHubToken": "{{GitHubToken}}" }'
