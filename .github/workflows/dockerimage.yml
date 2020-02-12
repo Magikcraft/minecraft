@@ -28,6 +28,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: ${{ matrix.minecraft.dockerfile }}
+          buildargs: BASEIMAGE, MINECRAFT_JAR
           tags: ${{ matrix.minecraft.jar }}-${{ matrix.baseimage.tag }}
 
   notify_Camunda_Cloud:

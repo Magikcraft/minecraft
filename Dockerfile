@@ -1,7 +1,7 @@
-ARG BASEIMAGE=oracle/graalvm-ce:19.3.1-java8
+ARG BASEIMAGE
 FROM $BASEIMAGE
 
-ARG MINECRAFT_JAR=paper-83.jar
+ARG MINECRAFT_JAR
 
 WORKDIR /_server_
 
