@@ -25,4 +25,4 @@ jobs:
           zeebe_client_secret: ${{ secrets.ZEEBE_CLIENT_SECRET }}
           operation: publishMessage
           message_name: BASE_IMAGE_REBUILT
-          variables: '{"buildid": "${{ github.event.client_payload.buildid }}"}'
+          correlationKey: ${{ github.event.client_payload.buildid }}
