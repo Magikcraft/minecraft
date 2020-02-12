@@ -28,7 +28,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: buildAndPublish
     steps:
-      - continue-on-error: false
       - name: Tell Camunda Cloud What's up!
         uses: jwulf/zeebe-action@master
         with:
