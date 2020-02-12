@@ -16,3 +16,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: Dockerfile
           tags: "paper-1.15.2-graalvm"
+      - name: Tell Camunda Cloud What's up!
+        uses: jwulf/zeebe-action@master
+        with:
+          operation: publishMessage
+          message_name: BASE_IMAGE_REBUILT
+          variables: '{"buildid": "${{ github.event.client_payload.buildid }}"}'
