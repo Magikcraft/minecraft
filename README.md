@@ -14,3 +14,7 @@ Containers are built on GitHub and published to Docker Hub.
 
 * Pokkit [0.9.3](https://github.com/PetteriM1/Pokkit)
 
+## Builds
+
+Building is accomplished via GitHub workflows orchestrated by Camunda Cloud. The BPMN model is [here](https://github.com/Magikcraft/MagikCraft/blob/development/automation/magikcraft-github-build.bpmn), and the build system is described in [this article](https://medium.com/@sitapati/complex-multi-repo-builds-with-github-actions-and-camunda-cloud-fa8e4c7abd26).
+
