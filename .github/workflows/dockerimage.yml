@@ -37,7 +37,7 @@ jobs:
     needs: build_and_publish
     steps:
       - name: Tell Camunda Cloud What's up!
-        uses: jwulf/zeebe-action@1.0.0
+        uses: jwulf/zeebe-action@1.0.1
         with:
           zeebeAddress: ${{ secrets.ZEEBE_ADDRESS }}
           zeebeClientId: ${{ secrets.ZEEBE_CLIENT_ID }}

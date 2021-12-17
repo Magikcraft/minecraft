@@ -13,7 +13,7 @@ jobs:
         uses: gerred/actions/current-time@master
         id: current-time
       - name: Create Zeebe Workflow
-        uses: jwulf/zeebe-action@1.0.0
+        uses: jwulf/zeebe-action@1.0.1
         with:
           zeebeAddress: ${{ secrets.ZEEBE_ADDRESS }}
           zeebeClientId: ${{ secrets.ZEEBE_CLIENT_ID }}
