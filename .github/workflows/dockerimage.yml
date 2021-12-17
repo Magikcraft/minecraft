@@ -12,6 +12,7 @@ jobs:
           - { image: "oracle/graalvm-ce:19.3.1-java8", tag: graalvm }
           - { image: "openjdk:8u171-jdk-alpine3.8", tag: openjdk8 }
         minecraft:
+          - { jar: paper-1.18.1-77, dockerfile: Dockerfile }
           - { jar: paper-1.15.2, dockerfile: Dockerfile }
           - { jar: paper-1.14.4, dockerfile: Dockerfile }
           - { jar: nukkit-1.0, dockerfile: Dockerfile-nukkit }

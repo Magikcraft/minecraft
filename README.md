@@ -7,6 +7,7 @@ Containers are built on GitHub and published to Docker Hub.
 * OpenJDK 8u171-jdk-alpine3.8
 * GraalVM 19.3.1-java8
 
+* Paperclip 1.18.1 [build #77](https://papermc.io/downloads)
 * Paperclip 1.15.2 [build #102](https://papermc.io/downloads)
 * Paperclip 1.14.4 [build #243](https://papermc.io/legacy)
 * Nukkit 1.0 [build #616](https://ci.nukkitx.com/job/NukkitX/job/Nukkit/job/master/)
