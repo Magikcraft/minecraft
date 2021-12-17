@@ -39,10 +39,7 @@ jobs:
       - name: Tell Camunda Cloud What's up!
         uses: jwulf/zeebe-action@1.0.1
         with:
-          zeebeAddress: ${{ secrets.ZEEBE_ADDRESS }}
-          zeebeClientId: ${{ secrets.ZEEBE_CLIENT_ID }}
-          zeebeAuthorizationServerUrl: ${{ secrets.ZEEBE_AUTHORIZATION_SERVER_URL }}
-          zeebeClientSecret: ${{ secrets.ZEEBE_CLIENT_SECRET }}
+          zeebeClientConfig: ${{ secrets.ZEEBE_CLIENT_CONFIG }}
           operation: publishMessage
           message_name: BASE_IMAGE_REBUILT
           correlationKey: ${{ github.event.client_payload.buildid }}
