@@ -17,7 +17,7 @@ jobs:
         with:
           zeebeAddress: ${{ secrets.ZEEBE_ADDRESS }}
           zeebeClientId: ${{ secrets.ZEEBE_CLIENT_ID }}
-          # zeebe_authorization_server_url: ${{ secrets.ZEEBE_AUTHORIZATION_SERVER_URL }}
+          zeebeAuthorizationServerUrl: ${{ secrets.ZEEBE_AUTHORIZATION_SERVER_URL }}
           zeebeClientSecret: ${{ secrets.ZEEBE_CLIENT_SECRET }}
           operation: createWorkflowInstance
           bpmnProcessId: magikcraft-github-build
