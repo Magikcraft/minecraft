@@ -15,10 +15,10 @@ jobs:
       - name: Create Zeebe Workflow
         uses: jwulf/zeebe-action@1.0.0
         with:
-          zeebe_address: ${{ secrets.ZEEBE_ADDRESS }}
-          zeebe_client_id: ${{ secrets.ZEEBE_CLIENT_ID }}
-          zeebe_authorization_server_url: ${{ secrets.ZEEBE_AUTHORIZATION_SERVER_URL }}
-          zeebe_client_secret: ${{ secrets.ZEEBE_CLIENT_SECRET }}
+          zeebeAddress: ${{ secrets.ZEEBE_ADDRESS }}
+          zeebeClientId: ${{ secrets.ZEEBE_CLIENT_ID }}
+          # zeebe_authorization_server_url: ${{ secrets.ZEEBE_AUTHORIZATION_SERVER_URL }}
+          zeebeClientSecret: ${{ secrets.ZEEBE_CLIENT_SECRET }}
           operation: createWorkflowInstance
-          bpmn_process_id: magikcraft-github-build
+          bpmnProcessId: magikcraft-github-build
           variables: '{"buildid": "${{ github.sha }}-${{ steps.current-time.outputs.time }}", "gitHubToken": "Bearer {{GitHubToken}}", "TYPE_TEST": "TYPE_TEST", "TYPE_PUBLISH": "TYPE_PUBLISH" }'
