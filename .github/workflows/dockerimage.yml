@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Publish Docker image to Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.12
+        uses: elgohr/Publish-Docker-Github-Action@v5
         env:
           BASEIMAGE: ${{ matrix.baseimage.image }}
           MINECRAFT_JAR: ${{ matrix.minecraft.jar }}.jar
